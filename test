@@ -2659,7 +2659,7 @@ do
 			local watermark = Library:Watermark({Name = Library.cheatname..Library.gamename})
 
 			-- // Watermark Toggle
-SettingsSection:Toggle({
+cfgs:Toggle({
 	Name = "Watermark",
 	Flag = "WatermarkToggle",
 	Default = false,
@@ -2669,7 +2669,7 @@ SettingsSection:Toggle({
 })
 --
 -- // Watermark X Position Slider
-SettingsSection:Slider({
+cfgs:Slider({
 	Name = "Watermark X Position",
 	Flag = "WatermarkX",
 	Min = 0,
@@ -2681,7 +2681,7 @@ SettingsSection:Slider({
 })
 --
 -- // Watermark Y Position Slider
-SettingsSection:Slider({
+cfgs:Slider({
 	Name = "Watermark Y Position",
 	Flag = "WatermarkY",
 	Min = 0,
