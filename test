@@ -23,7 +23,6 @@ do
 		cheatname = startupArgs.cheatname or 'Title',
 		gamename = startupArgs.gamename or 'Unknown',
 		logo = startupArgs.logo or 'Tapped',
-		icon = startupArgs.icon or '6155157900',
 		fileext = startupArgs.fileext or '.cfg',
 		Keys = {
 			[Enum.KeyCode.Space] = "Space",
@@ -860,17 +859,17 @@ do
 			Line2.Size = UDim2.new(0, 1, 1, 0)
 			Line2.Parent = Holder
 
-			local Logo = Instance.new("ImageLabel")
-			Logo.Name = "Logo"
-			Logo.Image = "http://www.roblox.com/asset/?id="..Library.icon
-			Logo.ScaleType = Enum.ScaleType.Fit
-			Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-			Logo.BackgroundTransparency = 1
-			Logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			Logo.BorderSizePixel = 0
-			Logo.Position = UDim2.fromOffset(10, -20)
-			Logo.Size = UDim2.fromOffset(90, 90)
-			Logo.Parent = Holder
+			local Icon = Instance.new("ImageLabel")
+			Icon.Name = "Icon"
+			Icon.Image = "rbxassetid://6155157900"
+			Icon.ScaleType = Enum.ScaleType.Fit
+			Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			Icon.BackgroundTransparency = 1
+			Icon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Icon.BorderSizePixel = 0
+			Icon.Position = UDim2.fromOffset(10, -20)
+			Icon.Size = UDim2.fromOffset(90, 90)
+			Icon.Parent = Holder
 
 			local FadeThing = Instance.new("Frame")
 			FadeThing.Name = "FadeThing"
