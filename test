@@ -22,7 +22,7 @@ do
 		Accent = startupArgs.color or Color3.fromRGB(255,165,206),
 		cheatname = startupArgs.cheatname or 'Title',
 		gamename = startupArgs.gamename or 'Unknown',
-		logo = startupArgs.logo or 'Tapped',
+		logo = startupArgs.logo,
 		fileext = startupArgs.fileext or '.cfg',
 		Keys = {
 			[Enum.KeyCode.Space] = "Space",
@@ -786,7 +786,7 @@ do
 			--
 			local Logo = Instance.new("TextLabel")
 			Logo.Name = "Logo"
-			Logo.Text = Library.logo
+			Logo.Text = "Tapped"
 			Logo.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json")
 			Logo.TextColor3 = Color3.fromRGB(255, 255, 255)
 			Logo.TextSize = 24
@@ -868,7 +868,7 @@ do
 			Icon.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Icon.BorderSizePixel = 0
 			Icon.Position = UDim2.fromOffset(10, -20)
-			Icon.Size = UDim2.fromOffset(90, 90)
+			Icon.Size = UDim2.fromOffset(50, 50)
 			Icon.Parent = Holder
 
 			local FadeThing = Instance.new("Frame")
