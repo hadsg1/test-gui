@@ -793,7 +793,7 @@ Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Logo.BackgroundTransparency = 1
 Logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Logo.BorderSizePixel = 0
-Logo.Position = UDim2.fromOffset(45, -20)
+Logo.Position = UDim2.fromOffset((10, -20)
 Logo.Size = UDim2.fromOffset(60, 60) -- Reduced size
 Logo.Parent = Holder
 			--
@@ -803,7 +803,7 @@ TextLabel.Text = "Tapped"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1
 TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.fromOffset(45, -20) -- Positioned after the smaller ImageLabel
+TextLabel.Position = UDim2.fromOffset(10, 40) -- Positioned after the smaller ImageLabel
 TextLabel.Size = UDim2.fromOffset(100, 30)
 TextLabel.Font = Enum.Font.SourceSans
 TextLabel.TextSize = 20
