@@ -745,59 +745,84 @@ do
 				Resized = nil,
 				Elements = {},
 			}
-			--
 			local ScreenGui = cloneref(Instance.new("ScreenGui", gethui()));
-			local Outline = Instance.new('Frame', ScreenGui)
-			local UICorner = Instance.new('UICorner', Outline)
-			local UIStroke = Instance.new('UIStroke', Outline)
-			local Inline = Instance.new('Frame', Outline)
-			local UICorner_2 = Instance.new('UICorner', Inline)
-			local Holder = Instance.new('Frame', Inline)
-			local UICorner = Instance.new('UICorner', Holder)
-			local Frame = Instance.new('Frame', Holder)
-			local Tabs = Instance.new('Frame', Inline)
-			local UIListLayout = Instance.new('UIListLayout', Tabs)
-			local TextButton = Instance.new('TextButton', Inline)
-			local Glow = Instance.new('ImageLabel', Outline)
-			--
-			ScreenGui.DisplayOrder = 100
-			ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-			Library.ScreenGUI = ScreenGui
-			--
-			Outline.Name = "Outline"
-			Outline.Position = UDim2.new(0.5,0,0.5,0)
-			Outline.Size = UDim2.new(0,0,0,40)
-			Outline.BackgroundColor3 = Color3.new(0.1961,0.1961,0.1961)
-			Outline.BorderColor3 = Color3.new(0,0,0)
-			Outline.AnchorPoint = Vector2.new(0.5,0.5)
-			Outline.ZIndex = 50
-			Outline.ClipsDescendants = false
-			Library.Holder = Outline
-			Library.OldSize = Window.Size
-			--
-			Glow.Name = "Glow"
-			Glow.BackgroundTransparency = 1
-			Glow.Position = UDim2.new(0, -15, 0, -15)
-			Glow.Size = UDim2.new(1, 30, 1, 30)
-			Glow.ZIndex = 0
-			Glow.Image = "rbxassetid://5028857084"
-			Glow.ImageColor3 = Library.Accent
-			Glow.ScaleType = Enum.ScaleType.Slice
-			Glow.SliceCenter = Rect.new(24, 24, 276, 276)
-			--
-			local Logo = Instance.new("TextLabel")
+		local Outline = Instance.new('Frame', ScreenGui)
+		local UICorner = Instance.new('UICorner', Outline)
+		local UIStroke = Instance.new('UIStroke', Outline)
+		local Inline = Instance.new('Frame', Outline)
+		local UICorner_2 = Instance.new('UICorner', Inline)
+		local Holder = Instance.new('Frame', Inline)
+		local UICorner = Instance.new('UICorner', Holder)
+		local Frame = Instance.new('Frame', Holder)
+		local Tabs = Instance.new('Frame', Inline)
+		local UIListLayout = Instance.new('UIListLayout', Tabs)
+		local TextButton = Instance.new('TextButton', Inline)
+		local Glow = Instance.new('ImageLabel', Outline)
+		--
+		ScreenGui.DisplayOrder = 100
+		ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+		Library.ScreenGUI = ScreenGui
+		--
+		Outline.Name = "Outline"
+		Outline.Position = UDim2.new(0.5,0,0.5,0)
+		Outline.Size = UDim2.new(0,0,0,40)
+		Outline.BackgroundColor3 = Color3.new(0.1961,0.1961,0.1961)
+		Outline.BorderColor3 = Color3.new(0,0,0)
+		Outline.AnchorPoint = Vector2.new(0.5,0.5)
+		Outline.ZIndex = 50
+		Outline.ClipsDescendants = false
+		Library.Holder = Outline
+		Library.OldSize = Window.Size
+		--
+		Glow.Name = "Glow"
+		Glow.BackgroundTransparency = 1
+		Glow.Position = UDim2.new(0, -15, 0, -15)
+		Glow.Size = UDim2.new(1, 30, 1, 30)
+		Glow.ZIndex = 0
+		Glow.Image = "rbxassetid://5028857084"
+		Glow.ImageColor3 = Library.Accent
+		Glow.ScaleType = Enum.ScaleType.Slice
+		Glow.SliceCenter = Rect.new(24, 24, 276, 276)
+		--
+		local Logo = Instance.new("TextLabel")
 		Logo.Name = "Logo"
 		Logo.Text = Library.logo
-		Logo.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json")
+		Logo.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
 		Logo.TextColor3 = Color3.fromRGB(255, 255, 255)
-		Logo.TextSize = 18
+		Logo.TextSize = 24
 		Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		Logo.BackgroundTransparency = 1
 		Logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		Logo.BorderSizePixel = 0
 		Logo.Position = UDim2.fromOffset(10, -20)
 		Logo.Size = UDim2.fromOffset(90, 90)
+		Logo.TextXAlignment = Enum.TextXAlignment.Left
+		Logo.TextYAlignment = Enum.TextYAlignment.Top
 		Logo.Parent = Holder
+		--
+		local LogoStroke = Instance.new("UIStroke")
+		LogoStroke.Name = "LogoStroke"
+		LogoStroke.Parent = Logo
+		LogoStroke.Color = Library.Accent
+		LogoStroke.Thickness = 1
+		LogoStroke.Transparency = 0
+		--
+		local LogoShadow = Instance.new("TextLabel")
+		LogoShadow.Name = "LogoShadow"
+		LogoShadow.Text = Library.logo
+		LogoShadow.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+		LogoShadow.TextColor3 = Color3.fromRGB(0, 0, 0)
+		LogoShadow.TextSize = 24
+		LogoShadow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		LogoShadow.BackgroundTransparency = 1
+		LogoShadow.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		LogoShadow.BorderSizePixel = 0
+		LogoShadow.Position = UDim2.fromOffset(11, -19)
+		LogoShadow.Size = UDim2.fromOffset(90, 90)
+		LogoShadow.TextXAlignment = Enum.TextXAlignment.Left
+		LogoShadow.TextYAlignment = Enum.TextYAlignment.Top
+		LogoShadow.ZIndex = Logo.ZIndex - 1
+		LogoShadow.Parent = Holder
 		--
 		Inline.Name = "Inline"
 		Inline.Position = UDim2.new(0,1,0,1)
@@ -822,7 +847,7 @@ do
 		--
 		Tabs.Name = "Tabs"
 		Tabs.Position = UDim2.new(0,5,0,10)
-		Tabs.Size = UDim2.new(0,140,1,-20)
+		Tabs.Size = UDim2.new(0,140,0,0)
 		Tabs.BackgroundColor3 = Color3.new(1,1,1)
 		Tabs.BackgroundTransparency = 1.01
 		Tabs.BorderSizePixel = 0
@@ -863,28 +888,54 @@ do
 		local Icon = Instance.new("TextLabel")
 		Icon.Name = "Icon"
 		Icon.Text = Library.icon
-		Icon.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json")
+		Icon.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
 		Icon.TextColor3 = Color3.fromRGB(255, 255, 255)
-		Icon.TextSize = 18
+		Icon.TextSize = 24
 		Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		Icon.BackgroundTransparency = 1
 		Icon.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		Icon.BorderSizePixel = 0
 		Icon.Position = UDim2.fromOffset(10, -20)
 		Icon.Size = UDim2.fromOffset(90, 90)
+		Icon.TextXAlignment = Enum.TextXAlignment.Left
+		Icon.TextYAlignment = Enum.TextYAlignment.Top
 		Icon.Parent = Holder
 		--
-
-			local FadeThing = Instance.new("Frame")
-			FadeThing.Name = "FadeThing"
-			FadeThing.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-			FadeThing.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			FadeThing.BorderSizePixel = 0
-			FadeThing.Position = UDim2.fromOffset(9, 59)
-			FadeThing.Size = UDim2.new(1, -18, 1, -63)
-			FadeThing.ZIndex = 55
-			FadeThing.Parent = Holder
-			FadeThing.Visible = false
+		local IconStroke = Instance.new("UIStroke")
+		IconStroke.Name = "IconStroke"
+		IconStroke.Parent = Icon
+		IconStroke.Color = Library.Accent
+		IconStroke.Thickness = 1
+		IconStroke.Transparency = 0
+		--
+		local IconShadow = Instance.new("TextLabel")
+		IconShadow.Name = "IconShadow"
+		IconShadow.Text = Library.icon
+		IconShadow.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+		IconShadow.TextColor3 = Color3.fromRGB(0, 0, 0)
+		IconShadow.TextSize = 24
+		IconShadow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		IconShadow.BackgroundTransparency = 1
+		IconShadow.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		IconShadow.BorderSizePixel = 0
+		IconShadow.Position = UDim2.fromOffset(11, -19)
+		IconShadow.Size = UDim2.fromOffset(90, 90)
+		IconShadow.TextXAlignment = Enum.TextXAlignment.Left
+		IconShadow.TextYAlignment = Enum.TextYAlignment.Top
+		IconShadow.ZIndex = Icon.ZIndex - 1
+		IconShadow.Parent = Holder
+		--
+		local FadeThing = Instance.new("Frame")
+		FadeThing.Name = "FadeThing"
+		FadeThing.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+		FadeThing.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		FadeThing.BorderSizePixel = 0
+		FadeThing.Position = UDim2.fromOffset(9, 59)
+		FadeThing.Size = UDim2.new(1, -18, 1, -63)
+		FadeThing.ZIndex = 55
+		FadeThing.Parent = Holder
+		FadeThing.Visible = false
+		--
 
 			-- // Elements
 			Window.Elements = {
