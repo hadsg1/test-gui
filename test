@@ -2658,40 +2658,6 @@ do
 			local window = tab:Section({Name = "Window", Side = "Right", Size = 427})
 			local watermark = Library:Watermark({Name = Library.cheatname..Library.gamename})
 
-			-- // Watermark Toggle
-cfgs:Toggle({
-	Name = "Watermark",
-	Flag = "WatermarkToggle",
-	Default = false,
-	Callback = function(Value)
-		Library.Watermark.Visible = Value
-	end
-})
---
--- // Watermark X Position Slider
-cfgs:Slider({
-	Name = "Watermark X Position",
-	Flag = "WatermarkX",
-	Min = 0,
-	Max = 1,
-	Default = 0,
-	Callback = function(Value)
-		Library.Watermark.Position = UDim2.new(Value, 0, Library.Flags["WatermarkY"] or 0, 0)
-	end
-})
---
--- // Watermark Y Position Slider
-cfgs:Slider({
-	Name = "Watermark Y Position",
-	Flag = "WatermarkY",
-	Min = 0,
-	Max = 1,
-	Default = 0,
-	Callback = function(Value)
-		Library.Watermark.Position = UDim2.new(Library.Flags["WatermarkX"] or 0, 0, Value, 0)
-	end
-})
-
 			local cfg_list = cfgs:List({Name = "Config List", Flag = "setting_configuration_list", Options = {}})
 			cfgs:Textbox({Flag = "settings_configuration_name", Placeholder = "Config name"})
 	
