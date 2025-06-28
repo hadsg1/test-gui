@@ -867,23 +867,9 @@ do
 		IconImage.BackgroundTransparency = 1
 		IconImage.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		IconImage.BorderSizePixel = 0
-		IconImage.Position = UDim2.fromOffset(10, -50)
+		IconImage.Position = UDim2.fromOffset(45, -20)
 		IconImage.Size = UDim2.fromOffset(30, 30)
 		IconImage.Parent = Holder
-		--
-		local Icon = Instance.new("TextLabel")
-		Icon.Name = "Icon"
-		Icon.Text = Library.icon
-		Icon.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json")
-		Icon.TextColor3 = Color3.fromRGB(255, 255, 255)
-		Icon.TextSize = 18
-		Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Icon.BackgroundTransparency = 1
-		Icon.BorderColor3 = Color3.fromRGB(0, 0, 0)
-		Icon.BorderSizePixel = 0
-		Icon.Position = UDim2.fromOffset(45, -20)
-		Icon.Size = UDim2.fromOffset(60, 90)
-		Icon.Parent = Holder
 		--
 		local FadeThing = Instance.new("Frame")
 		FadeThing.Name = "FadeThing"
