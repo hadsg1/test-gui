@@ -786,89 +786,94 @@ do
 			Glow.SliceCenter = Rect.new(24, 24, 276, 276)
 			--
 			local Logo = Instance.new("TextLabel")
-			Logo.Name = "Logo"
-			Logo.Image = "http://www.roblox.com/asset/?id="..Library.logo -- this is the logo in the top corner of ur menu.
-			Logo.ScaleType = Enum.ScaleType.Fit
-			Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-			Logo.BackgroundTransparency = 1
-			Logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			Logo.BorderSizePixel = 0
-			Logo.Position = UDim2.fromOffset(10, -20)
-			Logo.Size = UDim2.fromOffset(90, 90)
-			Logo.Parent = Holder
-			--
-			Inline.Name = "Inline"
-			Inline.Position = UDim2.new(0,1,0,1)
-			Inline.Size = UDim2.new(1,-2,1,-2)
-			Inline.BackgroundColor3 = Color3.new(0.051,0.051,0.051)
-			Inline.BorderSizePixel = 0
-			Inline.BorderColor3 = Color3.new(0,0,0)
-			Inline.ZIndex = 51
-			--
-			Holder.Name = "Holder"
-			Holder.Position = UDim2.new(0,150,0,0)
-			Holder.Size = UDim2.new(1,-150,1,0)
-			Holder.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
-			Holder.BorderSizePixel = 0
-			Holder.BorderColor3 = Color3.new(0,0,0)
-			Holder.ZIndex = 52
-			--
-			Frame.Size = UDim2.new(0,5,1,0)
-			Frame.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
-			Frame.BorderSizePixel = 0
-			Frame.BorderColor3 = Color3.new(0,0,0)
-			--
-			Tabs.Name = "Tabs"
-			Tabs.Position = UDim2.new(0,5,0,10)
-			Tabs.Size = UDim2.new(0,140,1,-20)
-				Tabs.BackgroundColor3 = Color3.new(1,1,1)
-			Tabs.BackgroundTransparency = 1.01
-			Tabs.BorderSizePixel = 0
-			Tabs.BorderColor3 = Color3.new(0,0,0)
-			--
-			UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-			UIListLayout.Padding = UDim.new(0,4)
-			--
-			TextButton.Size = UDim2.new(1,0,0,20)
-			TextButton.BackgroundColor3 = Color3.new(1,1,1)
-			TextButton.BackgroundTransparency = 1
-			TextButton.BorderSizePixel = 0
-			TextButton.BorderColor3 = Color3.new(0,0,0)
-			TextButton.Text = ""
-			TextButton.TextColor3 = Color3.new(0,0,0)
-			TextButton.AutoButtonColor = false
-			TextButton.Font = Enum.Font.SourceSans
-			TextButton.TextSize = 14
-			TextButton.ZIndex = 100
-
-			local Line1 = Instance.new("Frame")
-			Line1.Name = "Line1"
-			Line1.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-			Line1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			Line1.BorderSizePixel = 0
-			Line1.Position = UDim2.fromOffset(0, 50)
-			Line1.Size = UDim2.new(1, 0, 0, 1)
-			Line1.Parent = Holder
-
-			local Line2 = Instance.new("Frame")
-			Line2.Name = "Line2"
-			Line2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-			Line2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			Line2.BorderSizePixel = 0
-			Line2.Size = UDim2.new(0, 1, 1, 0)
-			Line2.Parent = Holder
-
-			local Logo = Instance.new("ImageLabel")
-			Logo.Name = "Logo"
-			Logo.Image = "http://www.roblox.com/asset/?id="..Library.icon
-			Logo.ScaleType = Enum.ScaleType.Fit
-			Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-			Logo.BackgroundTransparency = 1
-			Logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			Logo.BorderSizePixel = 0
-			Logo.Position = UDim2.fromOffset(10, -20)
-			Logo.Size = UDim2.fromOffset(90, 90)
-			Logo.Parent = Holder
+		Logo.Name = "Logo"
+		Logo.Text = Library.logo
+		Logo.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json")
+		Logo.TextColor3 = Color3.fromRGB(255, 255, 255)
+		Logo.TextSize = 18
+		Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Logo.BackgroundTransparency = 1
+		Logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Logo.BorderSizePixel = 0
+		Logo.Position = UDim2.fromOffset(10, -20)
+		Logo.Size = UDim2.fromOffset(90, 90)
+		Logo.Parent = Holder
+		--
+		Inline.Name = "Inline"
+		Inline.Position = UDim2.new(0,1,0,1)
+		Inline.Size = UDim2.new(1,-2,1,-2)
+		Inline.BackgroundColor3 = Color3.new(0.051,0.051,0.051)
+		Inline.BorderSizePixel = 0
+		Inline.BorderColor3 = Color3.new(0,0,0)
+		Inline.ZIndex = 51
+		--
+		Holder.Name = "Holder"
+		Holder.Position = UDim2.new(0,150,0,0)
+		Holder.Size = UDim2.new(1,-150,1,0)
+		Holder.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+		Holder.BorderSizePixel = 0
+		Holder.BorderColor3 = Color3.new(0,0,0)
+		Holder.ZIndex = 52
+		--
+		Frame.Size = UDim2.new(0,5,1,0)
+		Frame.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+		Frame.BorderSizePixel = 0
+		Frame.BorderColor3 = Color3.new(0,0,0)
+		--
+		Tabs.Name = "Tabs"
+		Tabs.Position = UDim2.new(0,5,0,10)
+		Tabs.Size = UDim2.new(0,140,1,-20)
+		Tabs.BackgroundColor3 = Color3.new(1,1,1)
+		Tabs.BackgroundTransparency = 1.01
+		Tabs.BorderSizePixel = 0
+		Tabs.BorderColor3 = Color3.new(0,0,0)
+		--
+		UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+		UIListLayout.Padding = UDim.new(0,4)
+		--
+		TextButton.Size = UDim2.new(1,0,0,20)
+		TextButton.BackgroundColor3 = Color3.new(1,1,1)
+		TextButton.BackgroundTransparency = 1
+		TextButton.BorderSizePixel = 0
+		TextButton.BorderColor3 = Color3.new(0,0,0)
+		TextButton.Text = ""
+		TextButton.TextColor3 = Color3.new(0,0,0)
+		TextButton.AutoButtonColor = false
+		TextButton.Font = Enum.Font.SourceSans
+		TextButton.TextSize = 14
+		TextButton.ZIndex = 100
+		--
+		local Line1 = Instance.new("Frame")
+		Line1.Name = "Line1"
+		Line1.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+		Line1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Line1.BorderSizePixel = 0
+		Line1.Position = UDim2.fromOffset(0, 50)
+		Line1.Size = UDim2.new(1, 0, 0, 1)
+		Line1.Parent = Holder
+		--
+		local Line2 = Instance.new("Frame")
+		Line2.Name = "Line2"
+		Line2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+		Line2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Line2.BorderSizePixel = 0
+		Line2.Size = UDim2.new(0, 1, 1, 0)
+		Line2.Parent = Holder
+		--
+		local Icon = Instance.new("TextLabel")
+		Icon.Name = "Icon"
+		Icon.Text = Library.icon
+		Icon.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json")
+		Icon.TextColor3 = Color3.fromRGB(255, 255, 255)
+		Icon.TextSize = 18
+		Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Icon.BackgroundTransparency = 1
+		Icon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Icon.BorderSizePixel = 0
+		Icon.Position = UDim2.fromOffset(10, -20)
+		Icon.Size = UDim2.fromOffset(90, 90)
+		Icon.Parent = Holder
+		--
 
 			local FadeThing = Instance.new("Frame")
 			FadeThing.Name = "FadeThing"
