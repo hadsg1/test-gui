@@ -23,7 +23,7 @@ do
 		cheatname = startupArgs.cheatname or 'Title',
 		gamename = startupArgs.gamename or 'Unknown',
 		logo = startupArgs.logo or 'Tapped',
-		icon = startupArgs.icon or 'Tapped',
+		icon = startupArgs.icon or '6155157900',
 		fileext = startupArgs.fileext or '.cfg',
 		Keys = {
 			[Enum.KeyCode.Space] = "Space",
@@ -785,10 +785,12 @@ do
 			Glow.ScaleType = Enum.ScaleType.Slice
 			Glow.SliceCenter = Rect.new(24, 24, 276, 276)
 			--
-			local Logo = Instance.new("ImageLabel")
+			local Logo = Instance.new("TextLabel")
 			Logo.Name = "Logo"
-			Logo.Image = "http://www.roblox.com/asset/?id="..Library.logo -- this is the logo in the top corner of ur menu.
-			Logo.ScaleType = Enum.ScaleType.Fit
+			Logo.Text = Library.logo
+			Logo.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json")
+			Logo.TextColor3 = Color3.fromRGB(255, 255, 255)
+			Logo.TextSize = 24
 			Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			Logo.BackgroundTransparency = 1
 			Logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
