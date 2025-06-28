@@ -784,17 +784,17 @@ do
 			Glow.ScaleType = Enum.ScaleType.Slice
 			Glow.SliceCenter = Rect.new(24, 24, 276, 276)
 			--
-local Logo = Instance.new("ImageLabel")
-Logo.Name = "Logo"
-Logo.Image = "http://www.roblox.com/asset/?id="..Library.logo -- this is the logo in the top corner of ur menu.
-Logo.ScaleType = Enum.ScaleType.Fit
-Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Logo.BackgroundTransparency = 1
-Logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Logo.BorderSizePixel = 0
-Logo.Position = UDim2.fromOffset((10, -20)
-Logo.Size = UDim2.fromOffset(60, 60) -- Reduced size
-Logo.Parent = Holder
+			local Logo = Instance.new("ImageLabel")
+			Logo.Name = "Logo"
+			Logo.Image = "http://www.roblox.com/asset/?id="..Library.logo -- this is the logo in the top corner of ur menu.
+			Logo.ScaleType = Enum.ScaleType.Fit
+			Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			Logo.BackgroundTransparency = 1
+			Logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Logo.BorderSizePixel = 0
+			Logo.Position = UDim2.fromOffset(10, -20)
+			Logo.Size = UDim2.fromOffset(90, 90)
+			Logo.Parent = Holder
 			--
 			Inline.Name = "Inline"
 			Inline.Position = UDim2.new(0,1,0,1)
