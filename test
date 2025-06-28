@@ -21,7 +21,7 @@ do
 		OptionListOpen = false,
 		Accent = startupArgs.color or Color3.fromRGB(255,165,206),
 		cheatname = startupArgs.cheatname or 'Title',
-		gamename = startupArgs.gamename or 'Unknown',
+		gamename = startupArgs.gamename or 'PEQWE',
 		logo = startupArgs.logo,
 		fileext = startupArgs.fileext or '.cfg',
 		Keys = {
@@ -867,7 +867,7 @@ do
 			Icon.BackgroundTransparency = 1
 			Icon.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Icon.BorderSizePixel = 0
-			Icon.Position = UDim2.fromOffset(30, -20)
+			Icon.Position = UDim2.fromOffset(100, -200)
 			Icon.Size = UDim2.fromOffset(50, 50)
 			Icon.Parent = Holder
 
