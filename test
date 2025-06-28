@@ -859,18 +859,6 @@ do
 			Line2.Size = UDim2.new(0, 1, 1, 0)
 			Line2.Parent = Holder
 
-			local Icon = Instance.new("ImageLabel")
-			Icon.Name = "Icon"
-			Icon.Image = "rbxassetid://6155157900"
-			Icon.ScaleType = Enum.ScaleType.Fit
-			Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-			Icon.BackgroundTransparency = 1
-			Icon.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			Icon.BorderSizePixel = 0
-			Icon.Position = UDim2.fromOffset(0, 100, 0, -20, 0)
-			Icon.Size = UDim2.fromOffset(50, 50)
-			Icon.Parent = Holder
-
 			local FadeThing = Instance.new("Frame")
 			FadeThing.Name = "FadeThing"
 			FadeThing.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
@@ -2669,6 +2657,40 @@ do
 			local cfgs = tab:Section({Name = "Config", Side = "Left", Size = 427})
 			local window = tab:Section({Name = "Window", Side = "Right", Size = 427})
 			local watermark = Library:Watermark({Name = Library.cheatname..Library.gamename})
+
+			-- // Watermark Toggle
+SettingsSection:Toggle({
+	Name = "Watermark",
+	Flag = "WatermarkToggle",
+	Default = false,
+	Callback = function(Value)
+		Library.Watermark.Visible = Value
+	end
+})
+--
+-- // Watermark X Position Slider
+SettingsSection:Slider({
+	Name = "Watermark X Position",
+	Flag = "WatermarkX",
+	Min = 0,
+	Max = 1,
+	Default = 0,
+	Callback = function(Value)
+		Library.Watermark.Position = UDim2.new(Value, 0, Library.Flags["WatermarkY"] or 0, 0)
+	end
+})
+--
+-- // Watermark Y Position Slider
+SettingsSection:Slider({
+	Name = "Watermark Y Position",
+	Flag = "WatermarkY",
+	Min = 0,
+	Max = 1,
+	Default = 0,
+	Callback = function(Value)
+		Library.Watermark.Position = UDim2.new(Library.Flags["WatermarkX"] or 0, 0, Value, 0)
+	end
+})
 
 			local cfg_list = cfgs:List({Name = "Config List", Flag = "setting_configuration_list", Options = {}})
 			cfgs:Textbox({Flag = "settings_configuration_name", Placeholder = "Config name"})
